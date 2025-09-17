@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROSPINE HEALTHCARE - Innovating Non-Surgical Spine & Healthcare Solutions</title>
-    <meta name="description" content="Leading provider of non-surgical spine care, physiotherapy, medical devices, and healthcare training. Advanced technology meets compassionate care.">
+    <meta name="description"
+        content="Leading provider of non-surgical spine care, physiotherapy, medical devices, and healthcare training. Advanced technology meets compassionate care.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.462.0/lucide.min.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -15,16 +17,16 @@
             --primary: 210 100% 45%;
             --primary-glow: 210 100% 65%;
             --primary-foreground: 0 0% 98%;
-            
+
             /* Medical colors */
             --medical: 168 76% 42%;
             --medical-light: 168 76% 85%;
             --medical-foreground: 0 0% 98%;
-            
+
             /* Accent colors */
             --accent: 213 94% 68%;
             --accent-foreground: 0 0% 98%;
-            
+
             /* Background colors */
             --background: 0 0% 100%;
             --foreground: 222 84% 5%;
@@ -32,25 +34,25 @@
             --card-foreground: 222 84% 5%;
             --popover: 0 0% 100%;
             --popover-foreground: 222 84% 5%;
-            
+
             /* Secondary colors */
             --secondary: 210 40% 96%;
             --secondary-foreground: 222 84% 5%;
-            
+
             /* Muted colors */
             --muted: 210 40% 96%;
             --muted-foreground: 215 16% 47%;
-            
+
             /* Border and input */
             --border: 214 32% 91%;
             --input: 214 32% 91%;
             --ring: 222 84% 5%;
-            
+
             /* Gradients */
             --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
             --gradient-medical: linear-gradient(135deg, hsl(var(--medical)), hsl(var(--accent)));
             --hero-gradient: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(16, 185, 129, 0.6));
-            
+
             /* Shadows */
             --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.1);
             --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
@@ -94,6 +96,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -105,6 +108,7 @@
                 opacity: 0;
                 transform: translateX(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -208,6 +212,7 @@
         }
     </style>
 </head>
+
 <body class="bg-white text-gray-900">
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
@@ -226,12 +231,18 @@
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-1">
-                    <a href="#home" class="nav-link px-4 py-2 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Home</a>
-                    <a href="#about" class="nav-link px-4 py-2 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">About</a>
-                    <a href="#services" class="nav-link px-4 py-2 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Services</a>
-                    <a href="#academy" class="nav-link px-4 py-2 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Academy</a>
-                    <a href="#innovation" class="nav-link px-4 py-2 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Innovation</a>
-                    <a href="#contact" class="nav-link px-4 py-2 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Contact</a>
+                    <a href="#home"
+                        class="nav-link px-4 py-2 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Home</a>
+                    <a href="#about"
+                        class="nav-link px-4 py-2 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">About</a>
+                    <a href="#services"
+                        class="nav-link px-4 py-2 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Services</a>
+                    <a href="#academy"
+                        class="nav-link px-4 py-2 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Academy</a>
+                    <a href="#innovation"
+                        class="nav-link px-4 py-2 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Innovation</a>
+                    <a href="#contact"
+                        class="nav-link px-4 py-2 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Contact</a>
                     <button class="btn-medical ml-4">Book Consultation</button>
                 </div>
 
@@ -244,12 +255,18 @@
             <!-- Mobile Navigation -->
             <div id="mobile-menu" class="mobile-menu md:hidden py-4 border-t border-gray-200">
                 <div class="flex flex-col space-y-2">
-                    <a href="#home" class="mobile-nav-link text-left px-4 py-3 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Home</a>
-                    <a href="#about" class="mobile-nav-link text-left px-4 py-3 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">About</a>
-                    <a href="#services" class="mobile-nav-link text-left px-4 py-3 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Services</a>
-                    <a href="#academy" class="mobile-nav-link text-left px-4 py-3 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Academy</a>
-                    <a href="#innovation" class="mobile-nav-link text-left px-4 py-3 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Innovation</a>
-                    <a href="#contact" class="mobile-nav-link text-left px-4 py-3 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Contact</a>
+                    <a href="#home"
+                        class="mobile-nav-link text-left px-4 py-3 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Home</a>
+                    <a href="#about"
+                        class="mobile-nav-link text-left px-4 py-3 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">About</a>
+                    <a href="#services"
+                        class="mobile-nav-link text-left px-4 py-3 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Services</a>
+                    <a href="#academy"
+                        class="mobile-nav-link text-left px-4 py-3 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Academy</a>
+                    <a href="#innovation"
+                        class="mobile-nav-link text-left px-4 py-3 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Innovation</a>
+                    <a href="#contact"
+                        class="mobile-nav-link text-left px-4 py-3 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Contact</a>
                     <button class="btn-medical mx-4 mt-4">Book Consultation</button>
                 </div>
             </div>
@@ -259,7 +276,8 @@
     <!-- Hero Section -->
     <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <!-- Background Image -->
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style="background-image: url('assets/spine.jpg');">
             <div class="absolute inset-0 hero-gradient"></div>
         </div>
 
@@ -270,9 +288,9 @@
                     Innovating <span style="color: hsl(var(--primary-glow))">Non-Surgical</span><br>
                     Spine & Healthcare Solutions
                 </h1>
-                
+
                 <p class="text-xl md:text-2xl text-white opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">
-                    Combining advanced technology, physiotherapy, and training to transform lives through 
+                    Combining advanced technology, physiotherapy, and training to transform lives through
                     non-invasive spinal healthcare and digital health innovation.
                 </p>
 
@@ -281,9 +299,14 @@
                         Explore Services
                         <i data-lucide="arrow-right" class="h-5 w-5"></i>
                     </button>
-                    
+
                     <button class="btn-outline text-lg" onclick="scrollToSection('contact')">
                         Partner With Us
+                        <i data-lucide="users" class="h-5 w-5"></i>
+                    </button>
+
+                    <button class="btn-outline text-lg">
+                        Investor Pitch
                         <i data-lucide="users" class="h-5 w-5"></i>
                     </button>
                 </div>
@@ -295,9 +318,10 @@
                             <i data-lucide="stethoscope" class="h-8 w-8" style="color: hsl(var(--primary-glow))"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-2">Spine & Rehabilitation</h3>
-                        <p class="text-white opacity-80">Advanced non-surgical spinal decompression and physiotherapy</p>
+                        <p class="text-white opacity-80">Advanced non-surgical spinal decompression and physiotherapy
+                        </p>
                     </div>
-                    
+
                     <div class="glass-effect rounded-lg p-6 hover-lift">
                         <div class="flex items-center justify-center mb-4">
                             <i data-lucide="award" class="h-8 w-8" style="color: hsl(var(--accent))"></i>
@@ -305,7 +329,7 @@
                         <h3 class="text-2xl font-bold text-white mb-2">Medical Technology</h3>
                         <p class="text-white opacity-80">Cutting-edge devices and digital health platforms</p>
                     </div>
-                    
+
                     <div class="glass-effect rounded-lg p-6 hover-lift">
                         <div class="flex items-center justify-center mb-4">
                             <i data-lucide="users" class="h-8 w-8" style="color: hsl(var(--medical))"></i>
@@ -333,7 +357,7 @@
                     About <span style="color: hsl(var(--primary))">PROSPINE HEALTHCARE</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Incorporated in Bangalore, India, we are pioneers in non-invasive spinal healthcare, 
+                    Incorporated in Bangalore, India, we are pioneers in non-invasive spinal healthcare,
                     combining advanced technology with compassionate care to transform lives globally.
                 </p>
             </div>
@@ -346,7 +370,7 @@
                         <h3 class="text-2xl font-bold text-gray-900">Our Vision</h3>
                     </div>
                     <p class="text-lg text-gray-600 leading-relaxed">
-                        To lead in non-invasive spinal healthcare and digital health innovation, 
+                        To lead in non-invasive spinal healthcare and digital health innovation,
                         making advanced treatment accessible to everyone, everywhere.
                     </p>
                 </div>
@@ -357,7 +381,7 @@
                         <h3 class="text-2xl font-bold text-gray-900">Our Mission</h3>
                     </div>
                     <p class="text-lg text-gray-600 leading-relaxed">
-                        To combine advanced technology, physiotherapy, and training to transform lives 
+                        To combine advanced technology, physiotherapy, and training to transform lives
                         through innovative, patient-centered healthcare solutions.
                     </p>
                 </div>
@@ -374,30 +398,85 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="bg-white rounded-lg p-8 text-center hover-lift shadow-lg">
-                        <div class="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <div
+                            class="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
                             <i data-lucide="users" class="h-10 w-10 text-white"></i>
                         </div>
                         <h4 class="text-xl font-bold text-gray-900 mb-2">Dr. Pranav Kumar</h4>
                         <p class="font-semibold mb-4" style="color: hsl(var(--primary))">Founder & Director</p>
-                        <p class="text-gray-600 leading-relaxed">Leading expert in non-surgical spine care with extensive experience in advanced physiotherapy techniques.</p>
+                        <p class="text-gray-600 leading-relaxed">Leading expert in non-surgical spine care with
+                            extensive experience in advanced physiotherapy techniques.</p>
                     </div>
 
                     <div class="bg-white rounded-lg p-8 text-center hover-lift shadow-lg">
-                        <div class="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <div
+                            class="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
                             <i data-lucide="users" class="h-10 w-10 text-white"></i>
                         </div>
                         <h4 class="text-xl font-bold text-gray-900 mb-2">Pallavi Singh</h4>
                         <p class="font-semibold mb-4" style="color: hsl(var(--primary))">Co-Founder & Director</p>
-                        <p class="text-gray-600 leading-relaxed">Healthcare technology innovator focused on digital health solutions and medical device development.</p>
+                        <p class="text-gray-600 leading-relaxed">Healthcare technology innovator focused on digital
+                            health solutions and medical device development.</p>
                     </div>
 
                     <div class="bg-white rounded-lg p-8 text-center hover-lift shadow-lg">
-                        <div class="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <div
+                            class="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
                             <i data-lucide="users" class="h-10 w-10 text-white"></i>
                         </div>
                         <h4 class="text-xl font-bold text-gray-900 mb-2">Priya Ranjan Kumar</h4>
                         <p class="font-semibold mb-4" style="color: hsl(var(--primary))">Co-Founder & Director (USA)</p>
-                        <p class="text-gray-600 leading-relaxed">International healthcare consultant driving global partnerships and expansion strategies.</p>
+                        <p class="text-gray-600 leading-relaxed">International healthcare consultant driving global
+                            partnerships and expansion strategies.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Mentors & Advisors</h3>
+                    <p class="text-lg text-gray-600">
+                        Esteemed experts guiding our mission with profound expertise
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="bg-gradient-to-br from-gray-50 to-white rounded-lg p-8 text-center hover-lift shadow-md hover:shadow-xl transition-all duration-300 ease-in-out">
+                        <div
+                            class="w-20 h-20 bg-gradient-to-tr from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner">
+                            <i data-lucide="award" class="h-10 w-10 text-white stroke-1"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Dr. G. Arun Maiya</h4>
+                        <p class="font-semibold mb-4" style="color: hsl(var(--primary))">Dean, Manipal College of Health
+                            Professionals</p>
+                        <p class="text-gray-600 leading-relaxed">Esteemed academic leader from Manipal, shaping the
+                            future of healthcare education and professional practice.</p>
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-br from-gray-50 to-white rounded-lg p-8 text-center hover-lift shadow-md hover:shadow-xl transition-all duration-300 ease-in-out">
+                        <div
+                            class="w-20 h-20 bg-gradient-to-tr from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner">
+                            <i data-lucide="stethoscope" class="h-10 w-10 text-white stroke-1"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Dr. Kalidutta Das</h4>
+                        <p class="font-semibold mb-4" style="color: hsl(var(--primary))">Orthopedic & Spine Surgeon</p>
+                        <p class="text-gray-600 leading-relaxed">Director of Spinal Services at the prestigious Indian
+                            Spinal Injury Centre, New Delhi, a leading authority in spinal care.</p>
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-br from-gray-50 to-white rounded-lg p-8 text-center hover-lift shadow-md hover:shadow-xl transition-all duration-300 ease-in-out">
+                        <div
+                            class="w-20 h-20 bg-gradient-to-tr from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner">
+                            <i data-lucide="globe" class="h-10 w-10 text-white stroke-1"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Dr. Sunita Patel</h4>
+                        <p class="font-semibold mb-4" style="color: hsl(var(--primary))">International Educator, Pelvic
+                            Health</p>
+                        <p class="text-gray-600 leading-relaxed">A distinguished international educator specializing in
+                            pelvic health, advancing knowledge and specialized practice worldwide.</p>
                     </div>
                 </div>
             </div>
@@ -454,7 +533,7 @@
                         Non-surgical spinal treatments and advanced rehabilitation techniques
                     </p>
                 </div>
-                
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white rounded-lg shadow-lg hover-lift">
                         <div class="p-8">
@@ -462,7 +541,8 @@
                                 <i data-lucide="stethoscope" class="h-8 w-8 text-white"></i>
                             </div>
                             <h4 class="text-xl font-bold text-gray-900 mb-4">Non-Surgical Spinal Decompression</h4>
-                            <p class="text-gray-600 leading-relaxed">Advanced techniques for treating herniated discs and spinal conditions without surgery.</p>
+                            <p class="text-gray-600 leading-relaxed">Advanced techniques for treating herniated discs
+                                and spinal conditions without surgery.</p>
                         </div>
                     </div>
 
@@ -472,7 +552,8 @@
                                 <i data-lucide="activity" class="h-8 w-8 text-white"></i>
                             </div>
                             <h4 class="text-xl font-bold text-gray-900 mb-4">Advanced Manual Therapy</h4>
-                            <p class="text-gray-600 leading-relaxed">Maitland, McKenzie, Mulligan techniques for comprehensive rehabilitation.</p>
+                            <p class="text-gray-600 leading-relaxed">Maitland, McKenzie, Mulligan techniques for
+                                comprehensive rehabilitation.</p>
                         </div>
                     </div>
 
@@ -482,7 +563,8 @@
                                 <i data-lucide="brain" class="h-8 w-8 text-white"></i>
                             </div>
                             <h4 class="text-xl font-bold text-gray-900 mb-4">Robotic & Digital Rehab</h4>
-                            <p class="text-gray-600 leading-relaxed">State-of-the-art robotic systems for precise and effective rehabilitation.</p>
+                            <p class="text-gray-600 leading-relaxed">State-of-the-art robotic systems for precise and
+                                effective rehabilitation.</p>
                         </div>
                     </div>
 
@@ -492,7 +574,8 @@
                                 <i data-lucide="zap" class="h-8 w-8 text-white"></i>
                             </div>
                             <h4 class="text-xl font-bold text-gray-900 mb-4">Pain Management</h4>
-                            <p class="text-gray-600 leading-relaxed">Laser therapy, Shockwave, IFT, and Ultrasound treatments for pain relief.</p>
+                            <p class="text-gray-600 leading-relaxed">Laser therapy, Shockwave, IFT, and Ultrasound
+                                treatments for pain relief.</p>
                         </div>
                     </div>
 
@@ -502,7 +585,8 @@
                                 <i data-lucide="heart" class="h-8 w-8 text-white"></i>
                             </div>
                             <h4 class="text-xl font-bold text-gray-900 mb-4">Women's Health & Pelvic Floor</h4>
-                            <p class="text-gray-600 leading-relaxed">Specialized rehabilitation programs for women's health concerns.</p>
+                            <p class="text-gray-600 leading-relaxed">Specialized rehabilitation programs for women's
+                                health concerns.</p>
                         </div>
                     </div>
 
@@ -512,7 +596,8 @@
                                 <i data-lucide="shield" class="h-8 w-8 text-white"></i>
                             </div>
                             <h4 class="text-xl font-bold text-gray-900 mb-4">Geriatric & Pediatric Rehab</h4>
-                            <p class="text-gray-600 leading-relaxed">Age-specific rehabilitation programs for optimal patient outcomes.</p>
+                            <p class="text-gray-600 leading-relaxed">Age-specific rehabilitation programs for optimal
+                                patient outcomes.</p>
                         </div>
                     </div>
                 </div>
@@ -554,10 +639,12 @@
                             <div class="w-16 h-16 gradient-medical rounded-lg flex items-center justify-center">
                                 <i data-lucide="graduation-cap" class="h-8 w-8 text-white"></i>
                             </div>
-                            <span class="text-sm font-semibold bg-green-100 text-green-800 px-3 py-1 rounded-full">Advanced</span>
+                            <span
+                                class="text-sm font-semibold bg-green-100 text-green-800 px-3 py-1 rounded-full">Advanced</span>
                         </div>
                         <h4 class="text-xl font-bold text-gray-900 mb-4">Fellowship Programs</h4>
-                        <p class="text-gray-600 leading-relaxed mb-4">Comprehensive fellowship programs in spine care and advanced physiotherapy techniques.</p>
+                        <p class="text-gray-600 leading-relaxed mb-4">Comprehensive fellowship programs in spine care
+                            and advanced physiotherapy techniques.</p>
                         <div class="flex items-center text-sm text-gray-600">
                             <i data-lucide="calendar" class="h-4 w-4 mr-2"></i>
                             Duration: 6-12 months
@@ -571,10 +658,12 @@
                             <div class="w-16 h-16 gradient-medical rounded-lg flex items-center justify-center">
                                 <i data-lucide="award" class="h-8 w-8 text-white"></i>
                             </div>
-                            <span class="text-sm font-semibold bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Intermediate</span>
+                            <span
+                                class="text-sm font-semibold bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Intermediate</span>
                         </div>
                         <h4 class="text-xl font-bold text-gray-900 mb-4">Certification Courses</h4>
-                        <p class="text-gray-600 leading-relaxed mb-4">Professional certification in specialized areas of healthcare and rehabilitation.</p>
+                        <p class="text-gray-600 leading-relaxed mb-4">Professional certification in specialized areas of
+                            healthcare and rehabilitation.</p>
                         <div class="flex items-center text-sm text-gray-600">
                             <i data-lucide="calendar" class="h-4 w-4 mr-2"></i>
                             Duration: 3-6 months
@@ -588,10 +677,12 @@
                             <div class="w-16 h-16 gradient-medical rounded-lg flex items-center justify-center">
                                 <i data-lucide="video" class="h-8 w-8 text-white"></i>
                             </div>
-                            <span class="text-sm font-semibold bg-gray-100 text-gray-800 px-3 py-1 rounded-full">All Levels</span>
+                            <span class="text-sm font-semibold bg-gray-100 text-gray-800 px-3 py-1 rounded-full">All
+                                Levels</span>
                         </div>
                         <h4 class="text-xl font-bold text-gray-900 mb-4">Workshops & Webinars</h4>
-                        <p class="text-gray-600 leading-relaxed mb-4">Interactive workshops on office syndrome prevention and spinal rehabilitation.</p>
+                        <p class="text-gray-600 leading-relaxed mb-4">Interactive workshops on office syndrome
+                            prevention and spinal rehabilitation.</p>
                         <div class="flex items-center text-sm text-gray-600">
                             <i data-lucide="calendar" class="h-4 w-4 mr-2"></i>
                             Duration: 1-3 days
@@ -605,10 +696,12 @@
                             <div class="w-16 h-16 gradient-medical rounded-lg flex items-center justify-center">
                                 <i data-lucide="monitor" class="h-8 w-8 text-white"></i>
                             </div>
-                            <span class="text-sm font-semibold bg-gray-100 text-gray-800 px-3 py-1 rounded-full">All Levels</span>
+                            <span class="text-sm font-semibold bg-gray-100 text-gray-800 px-3 py-1 rounded-full">All
+                                Levels</span>
                         </div>
                         <h4 class="text-xl font-bold text-gray-900 mb-4">Online Learning Portal</h4>
-                        <p class="text-gray-600 leading-relaxed mb-4">Digital platform for continuous learning and skill development (Coming Soon).</p>
+                        <p class="text-gray-600 leading-relaxed mb-4">Digital platform for continuous learning and skill
+                            development (Coming Soon).</p>
                         <div class="flex items-center text-sm text-gray-600">
                             <i data-lucide="calendar" class="h-4 w-4 mr-2"></i>
                             Duration: Self-paced
@@ -753,20 +846,28 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your Name">
+                                <input type="text"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="Your Name">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="your.email@example.com">
+                                <input type="email"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="your.email@example.com">
                             </div>
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="+91 XXXXX XXXXX">
+                            <input type="tel"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="+91 XXXXX XXXXX">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                            <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="How can we help you?"></textarea>
+                            <textarea rows="5"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="How can we help you?"></textarea>
                         </div>
                         <button type="submit" class="w-full btn-hero">
                             Send Message
@@ -781,7 +882,8 @@
                         <h3 class="text-xl font-bold text-gray-900 mb-6">Corporate Office</h3>
                         <div class="space-y-4">
                             <div class="flex items-start">
-                                <i data-lucide="map-pin" class="h-5 w-5 mt-1 mr-3" style="color: hsl(var(--primary))"></i>
+                                <i data-lucide="map-pin" class="h-5 w-5 mt-1 mr-3"
+                                    style="color: hsl(var(--primary))"></i>
                                 <div>
                                     <p class="font-medium text-gray-900">Bangalore, India</p>
                                     <p class="text-gray-600">Complete address coming soon</p>
@@ -789,7 +891,8 @@
                             </div>
                             <div class="flex items-center">
                                 <i data-lucide="mail" class="h-5 w-5 mr-3" style="color: hsl(var(--primary))"></i>
-                                <a href="mailto:info@prospinehealthcare.com" class="text-blue-600 hover:underline">info@prospinehealthcare.com</a>
+                                <a href="mailto:info@prospinehealthcare.com"
+                                    class="text-blue-600 hover:underline">info@prospinehealthcare.com</a>
                             </div>
                             <div class="flex items-center">
                                 <i data-lucide="phone" class="h-5 w-5 mr-3" style="color: hsl(var(--primary))"></i>
@@ -821,15 +924,18 @@
                         <div class="space-y-4">
                             <div>
                                 <p class="font-medium text-gray-900">General Inquiries</p>
-                                <a href="mailto:contact@prospinehealthcare.com" class="text-blue-600 hover:underline">contact@prospinehealthcare.com</a>
+                                <a href="mailto:contact@prospinehealthcare.com"
+                                    class="text-blue-600 hover:underline">contact@prospinehealthcare.com</a>
                             </div>
                             <div>
                                 <p class="font-medium text-gray-900">Careers</p>
-                                <a href="mailto:careers@prospinehealthcare.com" class="text-blue-600 hover:underline">careers@prospinehealthcare.com</a>
+                                <a href="mailto:careers@prospinehealthcare.com"
+                                    class="text-blue-600 hover:underline">careers@prospinehealthcare.com</a>
                             </div>
                             <div>
                                 <p class="font-medium text-gray-900">Partnerships</p>
-                                <a href="mailto:partnerships@prospinehealthcare.com" class="text-blue-600 hover:underline">partnerships@prospinehealthcare.com</a>
+                                <a href="mailto:partnerships@prospinehealthcare.com"
+                                    class="text-blue-600 hover:underline">partnerships@prospinehealthcare.com</a>
                             </div>
                         </div>
                     </div>
@@ -854,7 +960,7 @@
                         </div>
                     </div>
                     <p class="text-gray-300 mb-6 leading-relaxed">
-                        Innovating non-surgical spine and healthcare solutions through advanced technology 
+                        Innovating non-surgical spine and healthcare solutions through advanced technology
                         and compassionate care.
                     </p>
                     <div class="space-y-2 text-sm">
@@ -877,11 +983,21 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">About Us</a></li>
-                        <li><a href="#services" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">Services</a></li>
-                        <li><a href="#academy" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">Academy</a></li>
-                        <li><a href="#innovation" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">Innovation</a></li>
-                        <li><a href="#contact" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">Contact</a></li>
+                        <li><a href="#about"
+                                class="text-gray-300 hover:text-blue-400 transition-colors duration-200">About Us</a>
+                        </li>
+                        <li><a href="#services"
+                                class="text-gray-300 hover:text-blue-400 transition-colors duration-200">Services</a>
+                        </li>
+                        <li><a href="#academy"
+                                class="text-gray-300 hover:text-blue-400 transition-colors duration-200">Academy</a>
+                        </li>
+                        <li><a href="#innovation"
+                                class="text-gray-300 hover:text-blue-400 transition-colors duration-200">Innovation</a>
+                        </li>
+                        <li><a href="#contact"
+                                class="text-gray-300 hover:text-blue-400 transition-colors duration-200">Contact</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -904,11 +1020,8 @@
                         Subscribe to our newsletter for the latest updates on healthcare innovations.
                     </p>
                     <div class="mb-4">
-                        <input
-                            type="email"
-                            placeholder="Enter your email"
-                            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
+                        <input type="email" placeholder="Enter your email"
+                            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                         <button class="w-full mt-2 btn-hero">Subscribe</button>
                     </div>
                 </div>
@@ -919,13 +1032,16 @@
             <!-- Bottom Footer -->
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-gray-400 text-sm mb-4 md:mb-0">
-                    <p>&copy; 2024 PROSPINE HEALTHCARE Pvt. Ltd. All rights reserved.</p>
+                    <p>&copy; 2025 PROSPINE HEALTHCARE Pvt. Ltd. All rights reserved.</p>
                 </div>
-                
+
                 <div class="flex space-x-6 text-sm">
-                    <button class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Privacy Policy</button>
-                    <button class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Terms of Use</button>
-                    <button class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Healthcare Disclaimer</button>
+                    <button class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Privacy
+                        Policy</button>
+                    <button class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Terms of
+                        Use</button>
+                    <button class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Healthcare
+                        Disclaimer</button>
                 </div>
             </div>
 
@@ -981,7 +1097,7 @@
                 e.preventDefault();
                 const sectionId = link.getAttribute('href').substring(1);
                 scrollToSection(sectionId);
-                
+
                 // Close mobile menu if open
                 mobileMenu.classList.remove('active');
                 const icon = mobileMenuBtn.querySelector('[data-lucide]');
@@ -1042,4 +1158,5 @@
         });
     </script>
 </body>
+
 </html>

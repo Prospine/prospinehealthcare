@@ -219,6 +219,17 @@
         body {
             top: 0px !important;
         }
+
+        /* Hides elements visually but keeps them accessible to scripts */
+        .visually-hidden {
+            position: absolute !important;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+            white-space: nowrap;
+            /* prevent text wrapping */
+        }
     </style>
 </head>
 
@@ -250,14 +261,6 @@
                     <a href="#contact"
                         class="nav-link px-4 py-2 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Contact</a>
                 </div>
-
-                <div id="language-toggle" class="flex items-center space-x-2 ml-4 text-sm font-medium text-gray-800">
-                    <button data-lang="en" class="lang-btn font-bold">EN</button>
-                    <span class="text-gray-300">|</span>
-                    <button data-lang="hi" class="lang-btn opacity-60">HI</button>
-                </div>
-
-                <div id="google_translate_element" class="hidden"></div>
 
                 <button id="mobile-menu-btn" class="md:hidden p-2">
                     <i data-lucide="menu" class="h-6 w-6"></i>
@@ -404,6 +407,13 @@
                         <p class="font-semibold mb-4" style="color: hsl(var(--primary))">Founder & Director</p>
                         <p class="text-gray-600 leading-relaxed">Leading expert in non-invasive spine care with
                             extensive experience in advanced physiotherapy techniques.</p>
+
+                        <div class="mt-6">
+                            <button id="openPranavModal"
+                                class="inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-md">
+                                View Full Profile
+                            </button>
+                        </div>
                     </div>
 
                     <div class="bg-white rounded-lg p-8 text-center hover-lift shadow-lg">
@@ -502,12 +512,7 @@
                             <p class="text-gray-600 leading-relaxed">Leading our clinical team with expertise in
                                 advanced spine care and rehabilitation protocols.</p>
                         </div>
-                        <div class="mt-6">
-                            <button id="openPranavModal"
-                                class="inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-md">
-                                View Full Profile
-                            </button>
-                        </div>
+
                     </div>
 
                     <div class="bg-white rounded-lg p-8 text-center hover-lift shadow-lg">
@@ -1223,54 +1228,6 @@
             </div>
         </div>
     </div>
-
-    <script type="text/javascript">
-        // This function initializes Google Translate with only English and Hindi
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'en,hi', // Only include English and Hindi
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-
-        // This function finds the hidden Google dropdown and triggers a language change
-        function triggerGoogleTranslate(lang) {
-            const googleCombo = document.querySelector('.goog-te-combo');
-            if (googleCombo) {
-                googleCombo.value = lang;
-                googleCombo.dispatchEvent(new Event('change'));
-            }
-        }
-
-        // Wait for the page to fully load before setting up our custom buttons
-        window.addEventListener('load', () => {
-            const languageToggle = document.getElementById('language-toggle');
-            if (languageToggle) {
-                const buttons = languageToggle.querySelectorAll('.lang-btn');
-
-                buttons.forEach(button => {
-                    button.addEventListener('click', (e) => {
-                        const lang = e.target.getAttribute('data-lang');
-
-                        // Trigger the translation
-                        triggerGoogleTranslate(lang);
-
-                        // Update button styles
-                        buttons.forEach(btn => {
-                            btn.classList.add('opacity-60');
-                            btn.classList.remove('font-bold');
-                        });
-                        e.target.classList.remove('opacity-60');
-                        e.target.classList.add('font-bold');
-                    });
-                });
-            }
-        });
-    </script>
-    <script type="text/javascript"
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script>
         // Initialize Lucide icons

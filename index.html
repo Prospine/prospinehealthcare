@@ -210,15 +210,22 @@
         ::-webkit-scrollbar-thumb:hover {
             background: hsl(var(--primary-glow));
         }
+
+        /* Hides the Google Translate banner */
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        }
+
+        body {
+            top: 0px !important;
+        }
     </style>
 </head>
 
 <body class="bg-white text-gray-900">
-    <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
                 <div class="flex items-center space-x-2">
                     <div class="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
                         <span class="text-white font-bold text-lg">P</span>
@@ -229,7 +236,6 @@
                     </div>
                 </div>
 
-                <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-1">
                     <a href="#home"
                         class="nav-link px-4 py-2 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Home</a>
@@ -243,16 +249,21 @@
                         class="nav-link px-4 py-2 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Innovation</a>
                     <a href="#contact"
                         class="nav-link px-4 py-2 rounded-lg transition-all duration-200 text-gray-900 hover:bg-gray-100">Contact</a>
-
                 </div>
 
-                <!-- Mobile Menu Button -->
+                <div id="language-toggle" class="flex items-center space-x-2 ml-4 text-sm font-medium text-gray-800">
+                    <button data-lang="en" class="lang-btn font-bold">EN</button>
+                    <span class="text-gray-300">|</span>
+                    <button data-lang="hi" class="lang-btn opacity-60">HI</button>
+                </div>
+
+                <div id="google_translate_element" class="hidden"></div>
+
                 <button id="mobile-menu-btn" class="md:hidden p-2">
                     <i data-lucide="menu" class="h-6 w-6"></i>
                 </button>
             </div>
 
-            <!-- Mobile Navigation -->
             <div id="mobile-menu" class="mobile-menu md:hidden py-4 border-t border-gray-200">
                 <div class="flex flex-col space-y-2">
                     <a href="#home"
@@ -272,14 +283,13 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home"
+        class="relative min-h-screen flex items-center justify-center overflow-hidden pt-[100px] md:pt-0">
         <div class="absolute inset-0 bg-cover bg-no-repeat"
             style="background-image: url('assets/spine.jpg'); background-position: 75% center;">
             <div class="absolute inset-0 hero-gradient"></div>
         </div>
 
-        <!-- Content -->
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="animate-fade-in">
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
@@ -308,7 +318,6 @@
                     </button>
                 </div>
 
-                <!-- Stats -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                     <div class="glass-effect rounded-lg p-6 hover-lift">
                         <div class="flex items-center justify-center mb-4">
@@ -322,7 +331,6 @@
                             <i data-lucide="award" class="h-8 w-8" style="color: hsl(var(--accent))"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-2">Medical Technology</h3>
-                        <!-- <p class="text-white opacity-80">Cutting-edge devices and digital health platforms</p> -->
                     </div>
 
                     <div class="glass-effect rounded-lg p-6 hover-lift">
@@ -330,13 +338,11 @@
                             <i data-lucide="users" class="h-8 w-8" style="color: hsl(var(--medical))"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-2">Training & Academy</h3>
-                        <!-- <p class="text-white opacity-80">Professional development and certification programs</p> -->
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <div class="w-6 h-10 border-2 border-white border-opacity-50 rounded-full flex justify-center">
                 <div class="w-1 h-3 bg-white bg-opacity-80 rounded-full mt-2 animate-pulse"></div>
@@ -344,7 +350,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="section-padding bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 animate-fade-in">
@@ -357,7 +362,6 @@
                 </p>
             </div>
 
-            <!-- Vision & Mission -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
                 <div class="bg-white rounded-lg p-8 hover-lift shadow-lg">
                     <div class="flex items-center mb-6">
@@ -382,7 +386,6 @@
                 </div>
             </div>
 
-            <!-- Leadership Team -->
             <div class="mb-16">
                 <div class="text-center mb-12">
                     <h3 class="text-3xl font-bold text-gray-900 mb-4">Leadership Team</h3>
@@ -566,7 +569,6 @@
 
 
 
-            <!-- Milestones -->
             <div class="gradient-medical rounded-2xl p-8 md:p-12 text-center">
                 <h3 class="text-3xl font-bold text-white mb-6">Our Journey</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -585,7 +587,6 @@
                 </div>
             </div>
 
-            <!-- Location -->
             <div class="mt-16 text-center">
                 <div class="flex items-center justify-center mb-4">
                     <i data-lucide="map-pin" class="h-6 w-6 mr-2" style="color: hsl(var(--primary))"></i>
@@ -598,7 +599,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="section-padding bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 animate-fade-in">
@@ -610,7 +610,6 @@
                 </p>
             </div>
 
-            <!-- Spine & Physiotherapy Care -->
             <div class="mb-20">
                 <div class="text-center mb-12">
                     <h3 class="text-3xl font-bold text-gray-900 mb-4">Spine Rehabilitation & Physiotherapy Services</h3>
@@ -688,7 +687,6 @@
                 </div>
             </div>
 
-            <!-- CTA -->
             <div class="text-center gradient-primary rounded-2xl p-8 md:p-12">
                 <h3 class="text-3xl font-bold text-white mb-4">
                     Ready to Transform Your Health?
@@ -704,7 +702,6 @@
         </div>
     </section>
 
-    <!-- Academy Section -->
     <section id="academy" class="section-padding bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 animate-fade-in">
@@ -716,7 +713,6 @@
                 </p>
             </div>
 
-            <!-- Training Programs -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                 <div class="bg-white rounded-lg shadow-lg hover-lift">
                     <div class="p-8">
@@ -795,7 +791,6 @@
                 </div>
             </div>
 
-            <!-- CTA Section -->
             <div class="gradient-medical rounded-2xl p-8 md:p-12 text-center">
                 <h3 class="text-3xl font-bold text-white mb-4">
                     Advance Your Healthcare Career
@@ -816,7 +811,6 @@
         </div>
     </section>
 
-    <!-- Innovation Section -->
     <section id="innovation" class="section-padding bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 animate-fade-in">
@@ -829,7 +823,6 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-                <!-- Research Areas -->
                 <div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-6">Research & Development Focus</h3>
                     <div class="space-y-4">
@@ -857,7 +850,6 @@
                     </div>
                 </div>
 
-                <!-- Partnerships -->
                 <div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-6">Global Collaborations</h3>
                     <div class="space-y-4">
@@ -886,7 +878,6 @@
                 </div>
             </div>
 
-            <!-- Innovation Stats -->
             <div class="gradient-primary rounded-2xl p-8 md:p-12 text-center">
                 <h3 class="text-3xl font-bold text-white mb-8">Innovation by Numbers</h3>
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -911,7 +902,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="section-padding bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 animate-fade-in">
@@ -924,7 +914,6 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Contact Form -->
                 <div class="bg-white rounded-lg shadow-lg p-8">
                     <h3 class="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
                     <form class="space-y-6">
@@ -941,6 +930,22 @@
                                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                     placeholder="your.email@example.com">
                             </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Topic</label>
+                            <select
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white">
+                                <option selected disabled>Please select a topic...</option>
+                                <option>Appointment</option>
+                                <option>Back pain/Spine issue</option>
+                                <option>Shoulder related</option>
+                                <option>Leg related issue</option>
+                                <option>Neck related issue</option>
+                                <option>Rehabilitation Service</option>
+                                <option>Pre/Post Surgery support</option>
+                                <option>Partnership related</option>
+                                <option>Website issue</option>
+                            </select>
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
@@ -961,7 +966,6 @@
                     </form>
                 </div>
 
-                <!-- Contact Information -->
                 <div class="space-y-8">
                     <div class="bg-white rounded-lg shadow-lg p-8">
                         <h3 class="text-xl font-bold text-gray-900 mb-6">Corporate Office</h3>
@@ -971,7 +975,7 @@
                                     style="color: hsl(var(--primary))"></i>
                                 <div>
                                     <p class="font-medium text-gray-900">Bangalore, India</p>
-                                    <p class="text-gray-600">Complete address coming soon</p>
+                                    <p class="text-gray-600">Sarjapur Road, Bangalore, Karnataka, India</p>
                                 </div>
                             </div>
                             <div class="flex items-center">
@@ -981,7 +985,7 @@
                             </div>
                             <div class="flex items-center">
                                 <i data-lucide="phone" class="h-5 w-5 mr-3" style="color: hsl(var(--primary))"></i>
-                                <span class="text-gray-600">+91 (0) 80-XXXXXXX</span>
+                                <span class="text-gray-600">+91 8002421212</span>
                             </div>
                         </div>
                     </div>
@@ -1029,11 +1033,9 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-gray-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Company Info -->
                 <div class="lg:col-span-1">
                     <div class="flex items-center space-x-2 mb-4">
                         <div class="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
@@ -1051,7 +1053,7 @@
                     <div class="space-y-2 text-sm">
                         <div class="flex items-center">
                             <i data-lucide="map-pin" class="h-4 w-4 mr-2" style="color: hsl(var(--primary))"></i>
-                            <span class="text-gray-300">Bangalore, India</span>
+                            <span class="text-gray-300">Sarjapur Road, Bangalore</span>
                         </div>
                         <div class="flex items-center">
                             <i data-lucide="mail" class="h-4 w-4 mr-2" style="color: hsl(var(--primary))"></i>
@@ -1059,12 +1061,11 @@
                         </div>
                         <div class="flex items-center">
                             <i data-lucide="phone" class="h-4 w-4 mr-2" style="color: hsl(var(--primary))"></i>
-                            <span class="text-gray-300">+91 (0) 80-XXXXXXX</span>
+                            <span class="text-gray-300">+91 8002421212</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Quick Links -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
@@ -1086,7 +1087,6 @@
                     </ul>
                 </div>
 
-                <!-- Services -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Our Services</h4>
                     <ul class="space-y-2">
@@ -1098,7 +1098,6 @@
                     </ul>
                 </div>
 
-                <!-- Newsletter -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Stay Connected</h4>
                     <p class="text-gray-300 mb-4 text-sm">
@@ -1114,7 +1113,6 @@
 
             <div class="border-t border-gray-700 my-8"></div>
 
-            <!-- Bottom Footer -->
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-gray-400 text-sm mb-4 md:mb-0">
                     <p>&copy; 2025 PROSPINE HEALTHCARE Pvt. Ltd. All rights reserved.</p>
@@ -1130,11 +1128,11 @@
                 </div>
             </div>
 
-            <!-- Made with Love -->
             <div class="text-center mt-8 pt-4 border-t border-gray-700">
                 <p class="text-gray-500 text-sm flex items-center justify-center">
                     Made with<i data-lucide="heart" class="h-4 w-4 text-red-500 mx-1"></i> by &nbsp;<a
-                        href="https://sumit7739.github.io/Portfolio-main/" target="_blank" class="text-red-500"> Sumit Srivastava
+                        href="https://sumit7739.github.io/Portfolio-main/" target="_blank" class="text-red-500"> Sumit
+                        Srivastava
                     </a>&nbsp; for better
                     healthcare
                 </p>
@@ -1225,6 +1223,54 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        // This function initializes Google Translate with only English and Hindi
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi', // Only include English and Hindi
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        // This function finds the hidden Google dropdown and triggers a language change
+        function triggerGoogleTranslate(lang) {
+            const googleCombo = document.querySelector('.goog-te-combo');
+            if (googleCombo) {
+                googleCombo.value = lang;
+                googleCombo.dispatchEvent(new Event('change'));
+            }
+        }
+
+        // Wait for the page to fully load before setting up our custom buttons
+        window.addEventListener('load', () => {
+            const languageToggle = document.getElementById('language-toggle');
+            if (languageToggle) {
+                const buttons = languageToggle.querySelectorAll('.lang-btn');
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const lang = e.target.getAttribute('data-lang');
+
+                        // Trigger the translation
+                        triggerGoogleTranslate(lang);
+
+                        // Update button styles
+                        buttons.forEach(btn => {
+                            btn.classList.add('opacity-60');
+                            btn.classList.remove('font-bold');
+                        });
+                        e.target.classList.remove('opacity-60');
+                        e.target.classList.add('font-bold');
+                    });
+                });
+            }
+        });
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script>
         // Initialize Lucide icons
